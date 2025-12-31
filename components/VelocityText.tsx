@@ -19,11 +19,11 @@ export default function VelocityText() {
                     Advance Happy New Year 2026&nbsp;•&nbsp;
                 </ScrollVelocityRow>
 
-                {/* Row 2: Scrolling Left */}
+                {/* Row 2: Scrolling Left (Now Right per request) */}
                 <ScrollVelocityRow
                     baseVelocity={3}
                     className="text-5xl md:text-8xl font-black text-transparent py-4"
-                    direction={-1}
+                    direction={1}
                 >
                     <span className="stroke-text">Belated Merry Christmas&nbsp;•&nbsp;</span>
                 </ScrollVelocityRow>

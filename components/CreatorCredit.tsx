@@ -48,7 +48,7 @@ export default function CreatorCredit() {
                 </p>
                 <a
                     ref={nameRef}
-                    href="https://cjblack.dev"
+                    href="https://cjblack-dev-minimalistic-portfolio.vercel.app"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-2xl md:text-4xl font-black bg-gradient-to-r from-brand-teal via-brand-pink to-brand-gold bg-clip-text text-transparent hover:scale-110 transition-transform duration-300 inline-block cursor-pointer"

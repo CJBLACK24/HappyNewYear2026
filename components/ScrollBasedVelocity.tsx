@@ -66,6 +66,12 @@ export function ScrollVelocityRow({
         const timeDelta = t - prevT.current;
         let moveBy = direction * baseVelocity * (timeDelta / 1000);
 
+        if (velocityFactor.get() < 0) {
+            direction = -1;
+        } else if (velocityFactor.get() > 0) {
+            direction = 1;
+        }
+
         moveBy += direction * moveBy * velocityFactor.get();
 
         baseX.set(baseX.get() + moveBy);

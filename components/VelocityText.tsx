@@ -8,24 +8,24 @@ import {
 export default function VelocityText() {
     return (
         <div className="relative flex w-full flex-col items-center justify-center overflow-hidden py-10">
-            <ScrollVelocityContainer className="font-black uppercase tracking-[-0.02em]">
+            <ScrollVelocityContainer className="font-bold uppercase tracking-[-0.02em]">
 
                 {/* Row 1: Scrolling Right */}
                 <ScrollVelocityRow
-                    baseVelocity={-2}
-                    className="text-[15vw] leading-[0.85] font-black bg-gradient-to-r from-brand-pink via-brand-teal to-brand-gold bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(0,245,255,0.3)]"
+                    baseVelocity={-1}
+                    className="text-5xl md:text-8xl font-black bg-gradient-to-r from-brand-pink via-brand-teal to-brand-gold bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(0,245,255,0.3)] py-4"
                     direction={1}
                 >
-                    HAPPY NEW YEAR 2026&nbsp;•&nbsp;
+                    Advance Happy New Year 2026&nbsp;•&nbsp;
                 </ScrollVelocityRow>
 
-                {/* Row 2: Stroke Text Effect */}
+                {/* Row 2: Scrolling Left */}
                 <ScrollVelocityRow
-                    baseVelocity={2}
-                    className="text-[15vw] leading-[0.85] font-black"
+                    baseVelocity={1}
+                    className="text-5xl md:text-8xl font-black text-transparent py-4"
                     direction={-1}
                 >
-                    <span className="stroke-text">HAPPY NEW YEAR 2026&nbsp;•&nbsp;</span>
+                    <span className="stroke-text">Belated Merry Christmas&nbsp;•&nbsp;</span>
                 </ScrollVelocityRow>
 
             </ScrollVelocityContainer>
@@ -36,7 +36,7 @@ export default function VelocityText() {
 
             <style jsx global>{`
         .stroke-text {
-          -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3);
+          -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
           color: transparent;
         }
       `}</style>

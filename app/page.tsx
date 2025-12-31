@@ -17,6 +17,7 @@ import VelocityText from "@/components/VelocityText";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
+  // Deployment fix: force update
   const containerRef = useRef<HTMLDivElement>(null);
   const countdownRef = useRef<HTMLElement>(null);
 

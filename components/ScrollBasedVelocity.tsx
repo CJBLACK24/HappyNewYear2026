@@ -56,7 +56,7 @@ export function ScrollVelocityRow({
         return () => window.removeEventListener("resize", calculateRepetitions);
     }, [children]);
 
-    const x = useTransform(baseX, (v) => `${v}%`);
+    const x = useTransform(baseX, (v) => `${wrap(-100 / repetitions, 0, v)}%`);
 
     const prevT = useRef<number>(0);
 
@@ -65,12 +65,6 @@ export function ScrollVelocityRow({
 
         const timeDelta = t - prevT.current;
         let moveBy = direction * baseVelocity * (timeDelta / 1000);
-
-        if (velocityFactor.get() < 0) {
-            direction = -1;
-        } else if (velocityFactor.get() > 0) {
-            direction = 1;
-        }
 
         moveBy += direction * moveBy * velocityFactor.get();
 
@@ -86,12 +80,18 @@ export function ScrollVelocityRow({
             <motion.div className={cn("inline-block", className)} style={{ x }}>
                 {Array.from({ length: repetitions }).map((_, i) => (
                     <span key={i} ref={i === 0 ? textRef : null}>
-                        {children}{" "}
+                        {children}
                     </span>
                 ))}
             </motion.div>
         </div>
     );
+}
+
+// Utility for wrapping
+function wrap(min: number, max: number, v: number) {
+    const rangeSize = max - min;
+    return ((((v - min) % rangeSize) + rangeSize) % rangeSize) + min;
 }
 
 export function ScrollVelocityContainer({

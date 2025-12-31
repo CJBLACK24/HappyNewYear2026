@@ -12,7 +12,7 @@ export default function VelocityText() {
 
                 {/* Row 1: Scrolling Right */}
                 <ScrollVelocityRow
-                    baseVelocity={-1}
+                    baseVelocity={-3}
                     className="text-5xl md:text-8xl font-black bg-gradient-to-r from-brand-pink via-brand-teal to-brand-gold bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(0,245,255,0.3)] py-4"
                     direction={1}
                 >
@@ -21,7 +21,7 @@ export default function VelocityText() {
 
                 {/* Row 2: Scrolling Left */}
                 <ScrollVelocityRow
-                    baseVelocity={1}
+                    baseVelocity={3}
                     className="text-5xl md:text-8xl font-black text-transparent py-4"
                     direction={-1}
                 >

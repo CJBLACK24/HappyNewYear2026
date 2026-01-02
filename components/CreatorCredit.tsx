@@ -57,7 +57,7 @@ export default function CreatorCredit() {
                     cjblack.dev
                 </a>
                 <div className="mt-3 text-xs md:text-sm text-brand-orange/70 tracking-wider">
-                    Full-Stack Software Engineer
+                    Vibe Coder
                 </div>
             </div>
         </div>

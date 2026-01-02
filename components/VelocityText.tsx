@@ -16,7 +16,7 @@ export default function VelocityText() {
                     className="text-5xl md:text-8xl font-black bg-gradient-to-r from-brand-pink via-brand-teal to-brand-gold bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(0,245,255,0.3)] py-4"
                     direction={1}
                 >
-                    Advance Happy New Year 2026&nbsp;•&nbsp;
+                    Happy New Year 2026&nbsp;•&nbsp;
                 </ScrollVelocityRow>
 
                 {/* Row 2: Scrolling Left (Now Right per request) */}
@@ -25,7 +25,7 @@ export default function VelocityText() {
                     className="text-5xl md:text-8xl font-black text-transparent py-4"
                     direction={1}
                 >
-                    <span className="stroke-text">Belated Merry Christmas&nbsp;•&nbsp;</span>
+                    <span className="stroke-text">Merry Christmas&nbsp;•&nbsp;</span>
                 </ScrollVelocityRow>
 
             </ScrollVelocityContainer>
